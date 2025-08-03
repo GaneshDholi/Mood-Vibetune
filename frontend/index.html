@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alice&family=Bangers&family=Cinzel:wght@400..900&family=Fauna+One&family=IBM+Plex+Sans+JP&family=Kalam:wght@300;400;700&family=Lobster&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>Live Mood Detection</title>
+</head>
+
+<body>
+    <nav class="nav-section">
+        <div class="nav-heading">
+            <img src="./assets/icons/head-icon.png" alt="head icon">
+            <h3>Mood Vibetunes</h3>
+        </div>
+        <button class="editbutton">Edit Button</button>
+    </nav>
+    <div class="hero-section">
+        <div class="camera-section">
+            <h1>Live Mood Detection</h1>
+            <div class="container screen">
+                <video id="myVideo" height="220" width="290" autoplay></video>
+                <canvas id="overlay"></canvas>
+            </div>
+        </div>
+        <div class="content-section">
+            <div class="content-head">
+                <img src="./assets/icons/music-icon.png" alt="Music Icon">
+                <h1>Real-time Mood Matching</h1>
+            </div>
+            <h5>We’re analyzing your mood in real-time to bring you music that matches your vibe. Sit back, relax, and
+                enjoy a personalized listening experience.</h5>
+            <div class="mood-container">
+                <img src="./assets/icons/mood-icon.png" alt="Mood Icon">
+                <p class="moodContent">Mood detected : </p>
+                <p class="moodDisplay" id="moodDisplay"></p>
+            </div>
+            <button class="button" id="captureButton">Start Listening</button>
+        </div>
+
+    </div>
+    <div class="body-section">
+        <h1>Recommended Tracks</h1>
+        <ul id="trackList"></ul>
+    </div>
+
+    <div id="lottie-container" style="display: none;">
+        <dotlottie-wc src="https://lottie.host/965ad7fc-fa14-437e-b2c3-da0fd93f9ecd/NO9oA51yMc.lottie"
+            style="width: 300px; height: 300px" speed="1" autoplay loop>
+        </dotlottie-wc>
+    </div>
+    <div id="lottie-container-not-found" style="display: none;">
+    <dotlottie-wc src="https://lottie.host/29d5ae3e-907d-4930-928c-0e2a3f24d4e2/K00BCRWNhz.lottie"
+        style="width: 300px;height: 300px" speed="1" autoplay loop>
+    </dotlottie-wc>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <script src="https://unpkg.com/canvas@2.11.2/browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
