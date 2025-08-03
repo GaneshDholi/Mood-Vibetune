@@ -115,7 +115,7 @@ function setupAudioControls(audio, button) {
 
 //fetching the data of mood
 function fetchTracks(mood) {
-  fetch(`http://localhost:5000/api/${mood}`)
+  fetch(`https://mood-vibetune.onrender.com/api/${mood}`)
     .then(r => {
       if (!r.ok) throw new Error("Track fetch failed");
       return r.json();
